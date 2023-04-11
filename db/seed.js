@@ -15,7 +15,7 @@ const dropTables = async() => {
   try {
     console.log("Starting to drop tables...");
 
-    // have to make sure to drop in correct order
+
     await client.query(`
       DROP TABLE IF EXISTS posts;
       DROP TABLE IF EXISTS users;
