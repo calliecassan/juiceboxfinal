@@ -1,5 +1,6 @@
 const { Client } = require('pg') // imports the pg module
-
+const apiRouter = require('./api');
+server.use('/api', apiRouter);
 const client = new Client('postgres://localhost:5432/juicebox-dev');
 
 /**

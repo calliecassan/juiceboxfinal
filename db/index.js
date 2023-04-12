@@ -46,7 +46,7 @@ const getAllUsers = async() => {
   return rows;
 };
 
-const getUserById = await (userId) => {
+const getUserById = async (userId) => {
   try {
     const { rows: [ user ] } = await client.query(`
       SELECT id, username, name, location, active
@@ -86,6 +86,7 @@ const createPost = async() => {
   } catch (error) {
     throw error;
   }
+
 
 
 const updatePost= async(postId, fields = {})=> {
